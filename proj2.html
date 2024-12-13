@@ -1,0 +1,35 @@
+<head>
+    <title>Sample Project 1</title>
+</head>
+
+<body>
+    <h1>Number Guessing game</h1>
+    <input type="number" id="enternumber">
+    <button onclick="check()">CHECK</button>
+    <p id="res">Guessed number</p>
+
+    <script>        
+        
+        function check()
+        {
+            var ran=Math.floor(Math.random() * 10) + 1;
+            var numberentered=document.getElementById("enternumber").value
+            var finalresult=document.getElementById("res")
+        
+            var storednumber=numberentered
+            if(storednumber==ran)
+            {
+                finalresult.innerText="Your guess is correct"
+            }
+            else if(storednumber>ran)
+            {
+                finalresult.innerText="Your guess is large"       
+            }
+            else
+            {
+                finalresult.innerText="Your guess is small"  
+            }
+        }
+
+    </script>
+</body>
